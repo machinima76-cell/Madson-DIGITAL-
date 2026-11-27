@@ -1,0 +1,6 @@
+# Arquivos de desenvolvimento / build — excluídos do upload de assets.
+# Aviso: _headers e _redirects NÃO podem estar aqui (são regras de roteamento do Pages/Workers).
+README.md
+tools/
+wrangler.toml
+*.zip

@@ -1,0 +1,22 @@
+# ==========================================================================
+# MADSON DIGITAL — configuração para Cloudflare Workers Builds / Pages
+# --------------------------------------------------------------------------
+# Necessário quando a Cloudflare conectada ao Git executa `npx wrangler deploy`.
+# Sem este arquivo, o Wrangler 4 não localiza o site e falha com:
+#   "Could not detect a directory containing static files (e.g. html, css and js)"
+#
+# IMPORTANTE: troque `name` pelo nome EXATO do Worker/projeto no painel da
+# Cloudflare. Se divergir, o deploy pode criar outro Worker ou falhar.
+# ==========================================================================
+
+name = "madson-digital"
+compatibility_date = "2026-11-26"
+
+[assets]
+# Site publicado a partir da raiz do repositório (onde está index.html).
+# Se os arquivos estiverem dentro de uma pasta, use ex.: directory = "./madson-digital"
+# e mova o .assetsignore para dentro dessa mesma pasta.
+directory = "./"
+html_handling = "auto-trailing-slash"
+# Serve 404.html com status 404 real para rotas inexistentes.
+not_found_handling = "404-page"

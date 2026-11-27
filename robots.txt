@@ -1,0 +1,5 @@
+# SUBSTITUIR o domínio abaixo pelo domínio definitivo da Cloudflare Pages
+User-agent: *
+Allow: /
+
+Sitemap: https://madson-digital.pages.dev/sitemap.xml
